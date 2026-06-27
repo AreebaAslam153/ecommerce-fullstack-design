@@ -12,11 +12,14 @@ function AddProductForm({
   handleSubmit,
 }) {
   const [uploading, setUploading] = useState(false);
+  const [fileName, setFileName] = useState("No image selected");
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
 
     if (!file) return;
+
+    setFileName(file.name);
 
     try {
       setUploading(true);
@@ -39,6 +42,7 @@ function AddProductForm({
       <h2>➕ Add New Product</h2>
 
       <form onSubmit={handleSubmit} className="product-form">
+
         <input
           type="text"
           placeholder="Product Name"
@@ -55,40 +59,41 @@ function AddProductForm({
           required
         />
 
-        {/* Image Upload */}
+        {/* Upload */}
 
-        <input
-          className="full-width"
-          type="file"
-          accept="image/*"
-          onChange={handleImageUpload}
-        />
+        <div className="upload-area full-width">
+
+          <label htmlFor="imageUpload" className="upload-btn">
+            📁 Choose Product Image
+          </label>
+
+          <input
+            id="imageUpload"
+            type="file"
+            accept="image/*"
+            onChange={handleImageUpload}
+          />
+
+          <span className="file-name">
+            {fileName}
+          </span>
+
+        </div>
 
         {uploading && (
-          <p
-            style={{
-              color: "#D4AF37",
-              fontWeight: "bold",
-            }}
-          >
+          <p className="uploading-text">
             Uploading Image...
           </p>
         )}
 
         {image && (
-          <img
-            src={image}
-            alt="Preview"
-            style={{
-              width: "180px",
-              height: "180px",
-              objectFit: "cover",
-              borderRadius: "12px",
-              margin: "15px auto",
-              display: "block",
-              border: "2px solid #ddd",
-            }}
-          />
+          <div className="preview-container">
+            <img
+              src={image}
+              alt="Preview"
+              className="preview-image"
+            />
+          </div>
         )}
 
         <button
@@ -98,6 +103,7 @@ function AddProductForm({
         >
           {uploading ? "Uploading..." : "Add Product"}
         </button>
+
       </form>
     </div>
   );

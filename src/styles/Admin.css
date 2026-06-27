@@ -1,5 +1,6 @@
-
-/* ========= ADMIN PAGE ========= */
+/* =========================
+   ADMIN PAGE
+========================= */
 
 .admin-page{
     display:flex;
@@ -7,7 +8,9 @@
     background:#f5f7fb;
 }
 
-/* ========= SIDEBAR ========= */
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar{
     width:250px;
@@ -47,14 +50,19 @@
     background:#374151;
 }
 
-/* ========= CONTENT ========= */
+/* =========================
+   CONTENT
+========================= */
 
 .admin-content{
     flex:1;
     padding:40px;
+    overflow:hidden;
 }
 
-/* ========= DASHBOARD CARDS ========= */
+/* =========================
+   DASHBOARD CARDS
+========================= */
 
 .cards{
     display:grid;
@@ -81,7 +89,9 @@
     color:#ff6b00;
 }
 
-/* ========= FORM ========= */
+/* =========================
+   FORM
+========================= */
 
 .form-card{
     background:white;
@@ -97,15 +107,22 @@
 
 .form-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
 
 .form-grid input{
+    width:100%;
     padding:14px;
     border:1px solid #ddd;
     border-radius:10px;
     font-size:15px;
+    box-sizing:border-box;
+}
+
+.form-grid input[type="file"]{
+    width:100%;
+    padding:10px;
 }
 
 .form-grid input:last-child{
@@ -114,31 +131,37 @@
 
 .add-btn{
     margin-top:20px;
+    width:100%;
     background:#ff6b00;
     color:white;
     border:none;
-    padding:14px 30px;
+    padding:15px;
     border-radius:10px;
     cursor:pointer;
     font-size:16px;
+    font-weight:bold;
 }
 
 .add-btn:hover{
     background:#e55d00;
 }
 
-/* ========= TABLE ========= */
+/* =========================
+   TABLE
+========================= */
 
 .table-card{
     background:white;
     border-radius:15px;
     padding:25px;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
+    overflow-x:auto;
 }
 
 .table-card table{
     width:100%;
     border-collapse:collapse;
+    min-width:850px;
 }
 
 .table-card th{
@@ -202,26 +225,61 @@
     padding:10px;
     border:1px solid #ddd;
     border-radius:8px;
+    box-sizing:border-box;
 }
 
-/* ========= RESPONSIVE ========= */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:900px){
+@media(max-width:992px){
 
 .admin-page{
-flex-direction:column;
+    flex-direction:column;
 }
 
-.sidebar{
-width:100%;
+.admin-content{
+    padding:20px;
 }
 
 .form-grid{
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 }
 
 .form-grid input:last-child{
-grid-column:auto;
+    grid-column:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.admin-content{
+    padding:15px;
+}
+
+.form-card{
+    padding:18px;
+}
+
+.table-card{
+    padding:15px;
+}
+
+.add-btn{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.form-card{
+    padding:15px;
+}
+
+.table-card{
+    padding:10px;
 }
 
 }

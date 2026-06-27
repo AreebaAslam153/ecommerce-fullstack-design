@@ -1,34 +1,107 @@
-.sidebar {
-  width: 240px;
-  min-height: 100vh;
-  background: #1f2937;
-  color: white;
-  padding: 30px 20px;
-  position: sticky;
-  top: 0;
+/* Desktop Sidebar */
+
+.sidebar{
+    width:240px;
+    min-height:100vh;
+    background:#1f2937;
+    color:white;
+    padding:30px 20px;
+    position:sticky;
+    top:0;
+    transition:.3s;
 }
 
-.sidebar h2 {
-  margin-bottom: 40px;
-  text-align: center;
-  color: #ff6b00;
+.sidebar h2{
+    text-align:center;
+    color:#ff6b00;
+    margin-bottom:40px;
 }
 
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 14px 18px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  transition: 0.3s;
-  font-weight: 500;
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px 18px;
+    margin-bottom:12px;
+    border-radius:10px;
+    transition:.3s;
 }
 
-.sidebar a:hover {
-  background: #ff6b00;
+.sidebar a:hover{
+    background:#ff6b00;
+    transform:translateX(5px);
 }
 
-.sidebar a.active {
-  background: #ff6b00;
+/* Mobile Header */
+
+.mobile-header{
+    display:none;
+    justify-content:space-between;
+    align-items:center;
+    background:#1f2937;
+    color:white;
+    padding:16px 20px;
+}
+
+.mobile-header h2{
+    color:#ff6b00;
+    margin:0;
+}
+
+.menu-btn{
+    border:none;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Close Button */
+
+.close-btn{
+    display:none;
+    border:none;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+/* Overlay */
+
+.sidebar-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:998;
+}
+
+/* Tablet & Mobile */
+
+@media(max-width:768px){
+
+.mobile-header{
+    display:flex;
+}
+
+.sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:240px;
+    height:100%;
+    z-index:999;
+    transition:.35s;
+    overflow-y:auto;
+}
+
+.sidebar.show{
+    left:0;
+}
+
+.close-btn{
+    display:block;
+}
+
 }

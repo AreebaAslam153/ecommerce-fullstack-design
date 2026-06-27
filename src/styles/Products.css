@@ -1,0 +1,223 @@
+.products-hero{
+
+background:linear-gradient(135deg,#111827,#1E293B);
+
+color:white;
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.products-hero h1{
+
+font-size:48px;
+
+margin-bottom:15px;
+
+font-weight:700;
+
+}
+
+.products-hero p{
+
+color:#d1d5db;
+
+font-size:18px;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:30px;
+
+}
+
+.products-container{
+
+max-width:1400px;
+
+margin:50px auto;
+
+padding:0 25px;
+
+}
+
+.products-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:20px;
+
+margin-bottom:40px;
+
+flex-wrap:wrap;
+
+}
+
+.search-box{
+
+width:350px;
+
+padding:16px 22px;
+
+border-radius:40px;
+
+border:2px solid #D4AF37;
+
+outline:none;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+.search-box:focus{
+
+box-shadow:0 0 12px rgba(212,175,55,.4);
+
+}
+
+.products-count{
+
+font-weight:600;
+
+color:#555;
+
+}
+
+.products-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.no-products{
+
+grid-column:1/-1;
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.no-products p{
+
+color:#777;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.products-hero h1{
+
+font-size:40px;
+
+}
+
+.products-hero p{
+
+font-size:17px;
+
+}
+
+.products-top{
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.search-box{
+
+width:100%;
+
+max-width:450px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.products-hero{
+
+padding:50px 20px;
+
+}
+
+.products-hero h1{
+
+font-size:32px;
+
+}
+
+.products-hero p{
+
+font-size:15px;
+
+line-height:26px;
+
+}
+
+.products-container{
+
+padding:0 15px;
+
+margin:35px auto;
+
+}
+
+.products-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.search-box{
+
+width:100%;
+
+padding:14px 18px;
+
+}
+
+.products-count{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+/* Small Phones */
+
+@media(max-width:380px){
+
+.products-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

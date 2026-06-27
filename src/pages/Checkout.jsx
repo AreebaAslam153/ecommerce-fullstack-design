@@ -5,6 +5,7 @@ import { auth, database } from "../firebase/firebase";
 import { ref, get } from "firebase/database";
 import { placeOrder } from "../services/productService";
 import { useNavigate } from "react-router-dom";
+import "../styles/Checkout.css";
 
 function Checkout() {
   const { cartItems, clearCart } = useCart();
@@ -104,28 +105,10 @@ function Checkout() {
         </p>
       </section>
 
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "50px auto",
-          padding: "20px",
-          display: "flex",
-          gap: "35px",
-          flexWrap: "wrap",
-          alignItems: "flex-start",
-        }}
-      >
+      <div className="checkout-container">
         {/* CUSTOMER INFO */}
 
-        <div
-          style={{
-            flex: "2",
-            background: "#fff",
-            padding: "35px",
-            borderRadius: "20px",
-            boxShadow: "0 12px 30px rgba(0,0,0,.08)",
-          }}
-        >
+        <div className="checkout-left">
           <h2
             style={{
               color: "#111827",
@@ -183,19 +166,7 @@ function Checkout() {
 
         {/* ORDER SUMMARY */}
 
-        <div
-          style={{
-            flex: "1",
-            minWidth: "320px",
-            background: "#111827",
-            color: "white",
-            padding: "30px",
-            borderRadius: "20px",
-            boxShadow: "0 12px 30px rgba(0,0,0,.15)",
-            position: "sticky",
-            top: "20px",
-          }}
-        >
+        <div className="checkout-right">
           <h2
             style={{
               color: "#D4AF37",
