@@ -1,0 +1,82 @@
+.customers-page {
+  display: flex;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.customers-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.customers-content h1 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.customers-content p {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.customer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.customer-top input {
+  width: 320px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.customer-count {
+  background: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.customer-table th {
+  background: #0f172a;
+  color: white;
+  padding: 16px;
+}
+
+.customer-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.customer-table tr:hover {
+  background: #f8fafc;
+}
+
+.admin-role {
+  background: #D4AF37;
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.customer-role {
+  background: #2563eb;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+}

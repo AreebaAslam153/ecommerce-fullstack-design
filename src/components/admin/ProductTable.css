@@ -1,0 +1,109 @@
+
+.product-table-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.product-table-card h2{
+    margin-bottom:25px;
+}
+
+.product-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.product-table th{
+    background:#f5f5f5;
+    padding:16px;
+    text-align:left;
+}
+
+.product-table td{
+    padding:16px;
+    border-bottom:1px solid #eee;
+    vertical-align:middle;
+}
+
+.product-table tbody tr:hover{
+    background:#fafafa;
+}
+
+.product-thumb{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.price-badge{
+    background:#fff3e0;
+    color:#ff6b00;
+    padding:8px 16px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.edit-btn,
+.delete-btn,
+.save-btn,
+.cancel-btn{
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.edit-btn{
+    background:#2196f3;
+    color:white;
+}
+
+.edit-btn:hover{
+    background:#1976d2;
+}
+
+.delete-btn{
+    background:#f44336;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#d32f2f;
+}
+
+.save-btn{
+    background:#4caf50;
+    color:white;
+}
+
+.cancel-btn{
+    background:#757575;
+    color:white;
+}
+
+.edit-form{
+    display:grid;
+    gap:15px;
+}
+
+.edit-form input{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.edit-buttons{
+    display:flex;
+}
+
+.empty-products{
+    text-align:center;
+    padding:40px;
+    color:#888;
+}

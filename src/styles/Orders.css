@@ -1,0 +1,223 @@
+body{
+    background:#F5F7FA;
+}
+
+.orders-hero{
+
+    background:linear-gradient(135deg,#111827,#1F2937);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    margin-bottom:40px;
+
+}
+
+.orders-hero h1{
+
+    font-size:42px;
+    margin-bottom:10px;
+
+}
+
+.orders-hero p{
+
+    color:#D1D5DB;
+
+}
+
+.orders-container{
+
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+
+}
+
+.no-orders{
+
+    text-align:center;
+    padding:80px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.order-card{
+
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:35px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.order-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+
+}
+
+.order-header h2{
+
+    color:#111827;
+    margin-bottom:8px;
+
+}
+
+.order-header p{
+
+    color:#666;
+    margin:6px 0;
+
+}
+
+.order-date{
+
+    margin-top:12px;
+    color:#999;
+
+}
+
+.status{
+
+    padding:10px 22px;
+    border-radius:30px;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:12px;
+
+}
+
+.pending{
+
+    background:#F59E0B;
+
+}
+
+.processing{
+
+    background:#3B82F6;
+
+}
+
+.delivered{
+
+    background:#22C55E;
+
+}
+
+.cancelled{
+
+    background:#EF4444;
+
+}
+
+.products-title{
+
+    font-size:22px;
+    font-weight:bold;
+    margin:25px 0 20px;
+    color:#111827;
+
+}
+
+.order-item{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:#F9FAFB;
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+
+}
+
+.order-item img{
+
+    width:90px;
+    height:90px;
+    object-fit:cover;
+    border-radius:12px;
+
+}
+
+.item-info{
+
+    flex:1;
+
+}
+
+.item-info h4{
+
+    margin-bottom:8px;
+
+}
+
+.order-footer{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:30px;
+    flex-wrap:wrap;
+    gap:20px;
+
+}
+
+.order-footer h2{
+
+    color:#111827;
+
+}
+
+.buttons{
+
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+
+}
+
+.buttons button{
+
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:10px;
+    padding:12px 18px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.processing{
+
+    background:#3B82F6;
+
+}
+
+.delivered{
+
+    background:#22C55E;
+
+}
+
+.cancelled{
+
+    background:#EF4444;
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
