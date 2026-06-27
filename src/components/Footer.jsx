@@ -1,25 +1,39 @@
+import { useEffect, useState } from "react";
+
 function Footer() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <footer
       style={{
         background: "#111827",
         color: "white",
-        marginTop: "80px",
+        marginTop: isMobile ? "50px" : "80px",
       }}
     >
       <div
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "60px 30px 30px",
+          padding: isMobile ? "40px 18px 20px" : "60px 30px 30px",
         }}
       >
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-            gap: "40px",
-            marginBottom: "40px",
+            gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+            gap: isMobile ? "25px" : "40px",
+            marginBottom: isMobile ? "25px" : "40px",
           }}
         >
           {/* Brand */}
@@ -28,7 +42,8 @@ function Footer() {
             <h2
               style={{
                 color: "#D4AF37",
-                marginBottom: "15px",
+                marginBottom: "12px",
+                fontSize: isMobile ? "22px" : "30px",
               }}
             >
               ShopEase
@@ -37,7 +52,8 @@ function Footer() {
             <p
               style={{
                 color: "#D1D5DB",
-                lineHeight: "28px",
+                lineHeight: isMobile ? "24px" : "28px",
+                fontSize: isMobile ? "14px" : "16px",
               }}
             >
               Your trusted destination for premium electronics,
@@ -51,16 +67,25 @@ function Footer() {
             <h3
               style={{
                 color: "#D4AF37",
-                marginBottom: "15px",
+                marginBottom: "12px",
+                fontSize: isMobile ? "18px" : "22px",
               }}
             >
               Quick Links
             </h3>
 
-            <p>Home</p>
-            <p>Products</p>
-            <p>Cart</p>
-            <p>Login</p>
+            {["Home", "Products", "Cart", "Login"].map((item) => (
+              <p
+                key={item}
+                style={{
+                  marginBottom: "8px",
+                  fontSize: isMobile ? "14px" : "16px",
+                  color: "#D1D5DB",
+                }}
+              >
+                {item}
+              </p>
+            ))}
           </div>
 
           {/* Customer Support */}
@@ -69,16 +94,30 @@ function Footer() {
             <h3
               style={{
                 color: "#D4AF37",
-                marginBottom: "15px",
+                marginBottom: "12px",
+                fontSize: isMobile ? "18px" : "22px",
               }}
             >
               Customer Support
             </h3>
 
-            <p>Fast Delivery</p>
-            <p>Secure Payment</p>
-            <p>Easy Returns</p>
-            <p>24/7 Support</p>
+            {[
+              "Fast Delivery",
+              "Secure Payment",
+              "Easy Returns",
+              "24/7 Support",
+            ].map((item) => (
+              <p
+                key={item}
+                style={{
+                  marginBottom: "8px",
+                  fontSize: isMobile ? "14px" : "16px",
+                  color: "#D1D5DB",
+                }}
+              >
+                {item}
+              </p>
+            ))}
           </div>
 
           {/* Contact */}
@@ -87,15 +126,42 @@ function Footer() {
             <h3
               style={{
                 color: "#D4AF37",
-                marginBottom: "15px",
+                marginBottom: "12px",
+                fontSize: isMobile ? "18px" : "22px",
               }}
             >
               Contact
             </h3>
 
-            <p>📧 support@shopease.com</p>
-            <p>📞 +92 300 1234567</p>
-            <p>📍 Multan, Pakistan</p>
+            <p
+              style={{
+                marginBottom: "8px",
+                fontSize: isMobile ? "14px" : "16px",
+                color: "#D1D5DB",
+              }}
+            >
+              📧 support@shopease.com
+            </p>
+
+            <p
+              style={{
+                marginBottom: "8px",
+                fontSize: isMobile ? "14px" : "16px",
+                color: "#D1D5DB",
+              }}
+            >
+              📞 +92 300 1234567
+            </p>
+
+            <p
+              style={{
+                marginBottom: "8px",
+                fontSize: isMobile ? "14px" : "16px",
+                color: "#D1D5DB",
+              }}
+            >
+              📍 Multan, Pakistan
+            </p>
           </div>
         </div>
 
@@ -109,20 +175,18 @@ function Footer() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "15px",
-            marginTop: "25px",
+            flexDirection: isMobile ? "column" : "row",
+            alignItems: "center",
+            textAlign: "center",
+            gap: "12px",
+            marginTop: "20px",
             color: "#9CA3AF",
-            fontSize: "15px",
+            fontSize: isMobile ? "12px" : "15px",
           }}
         >
-          <span>
-            © 2026 ShopEase. All Rights Reserved.
-          </span>
+          <span>© 2026 ShopEase. All Rights Reserved.</span>
 
-          <span>
-            Developed with ❤️ using React & Firebase
-          </span>
+          <span>Developed with ❤️ using React & Firebase</span>
         </div>
       </div>
     </footer>
