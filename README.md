@@ -18,6 +18,7 @@ The application is fully responsive and designed for both desktop and mobile dev
 
 ### Admin Features
 * Secure Admin Login
+  To Login for Admin The Credentials are: email= areeba@gmail.com, Password= 123456
 * Protected Admin Dashboard
 * Add Products
 * Edit Products
